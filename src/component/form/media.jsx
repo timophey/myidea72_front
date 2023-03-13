@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormMedia extends FormBase{
+    prefix = 'media';
     fieldsets = [
         {
             helper: 'В план необходимо включить наиболее значимые информационные ресурсы, на которых планируется публикация информации о ходе реализации проекта',

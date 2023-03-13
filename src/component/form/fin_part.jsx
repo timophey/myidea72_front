@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormPartfinancing extends FormBase{
+    
+    prefix = 'finpart';
+
     fieldsets = [
         {
             groups: [
@@ -19,7 +22,7 @@ class FormPartfinancing extends FormBase{
             helper: 'Техническая, информационная, материальная, организационная и т.п.',
             groups: [
                 {
-                    name: 'Наименование партнера:',
+                    name: 'Тип поддержки:',
                     fields: [
                         {
                             name: 'part_type',
@@ -31,7 +34,7 @@ class FormPartfinancing extends FormBase{
                     type: 'textarea',
                     fields: [
                         {
-                            name: 'part_type',
+                            name: 'part_list',
                         }
                     ]
                 },
@@ -40,7 +43,7 @@ class FormPartfinancing extends FormBase{
                     // type: 'textarea',
                     fields: [
                         {
-                            name: 'part_type',
+                            name: 'part_sum',
                             type: 'number',
                             placeholder: 'ххх руб.',
                         }

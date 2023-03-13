@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormResult extends FormBase{
+    prefix = 'result';
     fieldsets = [
         {
             helper: 'Информация о результатах социального проекта, которые предполагается достичь в ходе реализации проекта в количественном и качественном выражении, они являются критериями эффективности проекта'

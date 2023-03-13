@@ -1,7 +1,8 @@
-import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormTeam extends FormBase{
+
+    prefix = 'team_i';
 
     fieldsets = [
         {
@@ -24,7 +25,7 @@ class FormTeam extends FormBase{
                     type: 'text',
                     fields:[
                         {
-                            name: 'part_name',
+                            name: 'part_bday',
                             type: 'date',
                             value: "",
                             placeholder: "ХХ/хх/хххх",

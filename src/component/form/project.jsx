@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormProject extends FormBase{
@@ -100,6 +100,7 @@ class FormProject extends FormBase{
             ]
         },
     ];
+    prefix = "about";
 }
 
 export default FormProject;

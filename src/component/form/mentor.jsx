@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormMentor extends FormBase{
+    prefix = 'mentor';
     fieldsets = [
         {
             helper: 'Тот, кто делится опытом и консультирует, работает с руководителем и командой проекта над идеей и концепцией проекта, его организацией, реализацией, будет сопровождать проект на всех этапах до его завершения'

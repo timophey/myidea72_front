@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormCommon extends FormBase{
@@ -15,6 +14,7 @@ class FormCommon extends FormBase{
                             {
                                 type: 'radio',
                                 name: 'project_city',
+                                multiple: false,
                                 options: [
                                     {id: 1, name: 'Тюмени',},
                                     {id: 2, name: 'Тобольске',},
@@ -83,14 +83,14 @@ class FormCommon extends FormBase{
                         // type: '',
                         fields:[
                             {
-                                name: 'date_from',
+                                name: 'project_date_from',
                                 type: 'date',
                                 value: "",
                                 placeholder: 'хх/хх/хххх',
                                 className: 'form_control w50',
                             },
                             {
-                                name: 'date_to',
+                                name: 'project_date_to',
                                 type: 'date',
                                 value: "",
                                 placeholder: 'хх/хх/хххх',
@@ -102,11 +102,13 @@ class FormCommon extends FormBase{
             }
         ];
     
-    render(){
-        return <div className="form">
-            {this.renderFieldSets()}
-        </div>;
-    }
+    prefix = "project_common";
+
+    // render(){
+    //     return <div className="form">
+    //         {this.renderFieldSets()}
+    //     </div>;
+    // }
 }
 
 export default FormCommon;

@@ -1,8 +1,8 @@
-import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormLeader extends FormBase{
 
+    prefix = "leader";
     fieldsets = [
         {
             helper: "",

@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormEstimate extends FormBase{
+    
+    prefix="est";
+    
     fieldsets = [
         {
             groups: [
@@ -66,7 +69,7 @@ class FormEstimate extends FormBase{
 
     render(){
         return <div className="form">
-            {this.renderTableRow()}
+            {this.renderTableRow(this.state.sets)}
         </div>;
     }
 }

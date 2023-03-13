@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import Carousel from "./carousel";
-import { Routes, Route, Link } from "react-router-dom";
-import FormCommon from "./form/common";
-import FormLeader from "./form/leader";
+// import { Routes, Route, Link } from "react-router-dom";
+// import FormCommon from "./form/common";
+// import FormLeader from "./form/leader";
 import { Outlet } from "react-router-dom";
 
 class Myform extends Component{
+    
     render(){
         const tabs = this.props.tabs;//.map((el)=>{el.path = '/form/'+el.path;return el;});
         // const tabs = [
@@ -43,6 +44,7 @@ class Myform extends Component{
         //         path: '/form/financing'
         //     }*/
         // ];
+        // console.log(this)
         return <div className="container">
             <h2>Паспорт проекта</h2>
             <Carousel tabs={tabs}/>

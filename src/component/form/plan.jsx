@@ -1,7 +1,10 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 import FormBase from "./base";
 
 class FormPlan extends FormBase{
+
+    prefix = 'plan_i';
+
     fieldsets = [
         {
             groups:[
@@ -52,7 +55,7 @@ class FormPlan extends FormBase{
                     name: 'Дополнительная информация',
                     fields: [
                         {
-                            name: 'plan_name',
+                            name: 'plan_detail',
                             placeholder: '',
                         }
                     ]
@@ -63,7 +66,8 @@ class FormPlan extends FormBase{
     
     render(){
         return <div className="form">
-            {this.renderTableRow()}
+            {this.renderTableRow(this.state.sets)}
+            {/* {this.renderFieldSets(this.state.sets)} */}
         </div>;
     }
 
