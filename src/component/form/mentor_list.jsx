@@ -8,6 +8,9 @@ class FormMentorList extends FormBaseList{
     prefix = 'mentor';
     render(){
         let that = this;
+        let fieldsetsBefore = [{
+            helper: 'Тот, кто делится опытом и консультирует, работает с руководителем и командой проекта над идеей и концепцией проекта, его организацией, реализацией, будет сопровождать проект на всех этапах до его завершения'
+        }];
         let fieldsetsAfter = [{
             helper: '',
             groups: [
@@ -23,6 +26,7 @@ class FormMentorList extends FormBaseList{
         }
 
         return <>
+        {this.renderFieldSets(fieldsetsBefore)}
         <ListContext.Provider value={contextData}>
             {arItems.map((el,i)=>{
             let fieldsetsMiddle = [{
