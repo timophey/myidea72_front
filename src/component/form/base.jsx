@@ -178,7 +178,7 @@ class FormBase extends Component{
         // for(let k in objData) if(k in stateData) stateData[k] = objData[k];
         // this.setState({data: stateData});
     }
-    putStorage(){
+    putStorage(data = this.state.data){
         let key = this.storageKey; if(!key) return;
         window.localStorage.setItem(key,JSON.stringify(this.state.data));
     }
@@ -239,12 +239,14 @@ class FormBase extends Component{
                 <label>{name}</label>
                 {fields.map(({
                     name,
-                    type='text',
-                    placeholder='',
-                    className='form_control w100'
+                    type = 'text',
+                    placeholder = '',
+                    className = 'form_control w100',
+                    readonly=false
                     },i) => {
-                        let val 
-                        return <input name={name} type={type} className={className} placeholder={placeholder} key={i} onChange={that.handleChange.bind(that,fields[i])} value={data[ name ] ?? ''}/>
+                        let val = data[ name ] ?? '';
+                        if(type === 'number') val = Math.round(val,2);
+                        return <input name={name} type={type} className={className} placeholder={placeholder} key={i} onChange={that.handleChange.bind(that,fields[i])} value={val} readOnly={readonly}/>
                     }
                 )}
             </div>        

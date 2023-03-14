@@ -287,15 +287,15 @@ h3 {
   .form_table[data-g="1"] .form_group {
     width: 100%;
   }
-}
-.form_table .form_group[data-cols="40"] {
-  width: calc(100% / 12 * 4);
-}
-.form_table .form_group[data-cols="30"] {
-  width: calc(100% / 12 * 3);
-}
-.form_table .form_group[data-cols="20"] {
-  width: calc(100% / 12 * 2);
+  .form_table .form_group[data-cols="40"] {
+    width: calc(100% / 12 * 4);
+  }
+  .form_table .form_group[data-cols="30"] {
+    width: calc(100% / 12 * 3);
+  }
+  .form_table .form_group[data-cols="20"] {
+    width: calc(100% / 12 * 2);
+  }
 }
 @media (min-width: 960px) {
   .form_fields {
